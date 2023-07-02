@@ -1,4 +1,4 @@
-SELECT pw.project_id,
+SELECT pw.project_id AS Id,
 SUM(TIMESTAMPDIFF(MONTH, p.start_date, p.finish_date) * w.salary) AS overall_price
 FROM project_worker pw
 LEFT JOIN worker w ON pw.worker_id = w.id
